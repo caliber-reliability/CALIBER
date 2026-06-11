@@ -77,7 +77,7 @@ See **REPRODUCE.md** for the exact expected output of each script and how it map
 
 * **Determinism.** The primary split uses seed 42; the ten evaluation splits use seeds 0–9. Every model is seeded. Re-running yields identical numbers on the pinned dependency versions.
 * **Leakage-free protocol.** All splits are made at the **composition / formulation level**, never at the record level, so replicate specimens of one mixture cannot appear in both training and test sets. `splits/*.json` lists the exact row indices in each partition for all eleven splits.
-* **Conformal convention.** A single order-statistic radius (sorted absolute residual at index ⌈(n+1)(1−α)⌉) is used throughout, so all conformal coverage numbers come from one consistent implementation.
+* **Conformal convention.** The split-conformal radius is the order statistic ⌈(n+1)(1−α)⌉ of the absolute calibration residuals for the concrete and polymer classes, and the numpy linear-interpolation quantile at the same level for SFRC (equivalent finite-sample guarantee); this matches the manuscript. See `hyperparameters.md`.
 * **Fitting convention.** Class A (concrete) accuracy uses the training partition only (the conformal-core convention); Class B (SFRC) uses train + calibration. Both are stated in each script and in `hyperparameters.md`.
 
 ## Datasets
