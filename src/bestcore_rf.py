@@ -17,7 +17,7 @@ if __name__ == "__main__":
         core = RF(n_estimators=300, random_state=C.RNG).fit(X[tr], y[tr])
         rc, pt = np.abs(y[ca] - core.predict(X[ca])), core.predict(X[te])
         for a, _ in LEVELS:
-            cov[a].append(C.split_conformal(rc, pt, y[te], a)[0])
+            cov[a].append(C.split_conformal(rc, pt, y[te], a, radius_fn=C.quantile_radius)[0])
         err = np.abs(y[te] - core.predict(X[te])); nk, ni = C.novelty_scores(X[tr], X[te])
         knn.append(C.rho_ne(nk, err)); iso.append(C.rho_ne(ni, err))
     print("  split-conformal coverage:")
