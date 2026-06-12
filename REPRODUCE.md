@@ -84,3 +84,4 @@ novelty–error coupling with the weak-correlation band (|ρ| < 0.15). All figur
 python make_splits.py        # -> splits/concrete_splits.json, splits/sfrc_splits.json
 ```
 Each file lists the train/cal/test **row indices** for the primary split (seed 42) and all ten evaluation splits (seeds 0–9), so any table can be reconstructed exactly.
+ 
