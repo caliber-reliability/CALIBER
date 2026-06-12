@@ -16,6 +16,7 @@ This repository contains everything needed to reproduce every table, figure and 
 CALIBER/
 ├── README.md               # this file
 ├── REPRODUCE.md            # step-by-step: which script makes which table/number
+├── reproduce_results.ipynb # Jupyter notebook: runs every script, regenerates every table & figure
 ├── hyperparameters.md      # every model's hyperparameters + seeds
 ├── requirements.txt        # pinned dependencies
 ├── LICENSE                 # MIT (code); datasets keep their own licences
@@ -37,7 +38,10 @@ CALIBER/
     ├── random_vs_grouped.py# Sec. 5.2 — leakage demonstration
     ├── bestcore_rf.py      # Sec. 4.1 — random-forest-core robustness check
     ├── classC_polymer.py   # Sec. 5.3 — polymer stress test (Class C)
-    └── figure4.py          # Figure 4 — cross-class summary
+    ├── figure1_architecture.py # Figure 1 — system architecture
+    ├── figure2_coverage.py     # Figure 2 — conformal coverage
+    ├── figure3_importance.py   # Figure 3 — feature importance (SFRC core)
+    └── figure4.py              # Figure 4 — cross-class summary
 ```
 
 ---
@@ -65,9 +69,16 @@ python table5_novelty.py       # Table 5  (the ρNE criterion + near/far ablatio
 python random_vs_grouped.py    # Section 5.2 leakage demonstration
 python bestcore_rf.py          # Section 4.1 RF-core robustness
 python classC_polymer.py       # Section 5.3 polymer stress test
-python figure4.py              # writes results/figure4.png
+python figure1_architecture.py # writes figure1.png  (system architecture)
+python figure2_coverage.py     # writes figure2.png  (conformal coverage)
+python figure3_importance.py   # writes figure3.png  (feature importance)
+python figure4.py              # writes results/figure4.png  (cross-class summary)
 python make_splits.py          # (re)writes splits/*.json
 ```
+
+Alternatively, run the whole pipeline interactively in **`reproduce_results.ipynb`** (from the
+repository root): it executes every script above and regenerates every table and figure in one
+notebook, with the expected numbers shown alongside each cell.
 
 See **REPRODUCE.md** for the exact expected output of each script and how it maps to the manuscript.
 
