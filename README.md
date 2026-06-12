@@ -112,4 +112,4 @@ If you use this code, please cite the paper:
 
 ## License
 
-Code: MIT (see `LICENSE`). Datasets: redistributed under their original licences (see `data/README.md`).
+Code: MIT (see `LICENSE`). Datasets: redistributed under their original licences (see `data/README.md`). 
