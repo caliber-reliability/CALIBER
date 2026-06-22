@@ -37,6 +37,7 @@ CALIBER/
     ├── table5_novelty.py   # Table 5  — novelty–error coupling criterion
     ├── random_vs_grouped.py# Sec. 5.2 — leakage demonstration
     ├── bestcore_rf.py      # Sec. 4.1 — random-forest-core robustness check
+    ├── bootstrap_sfrc.py   # Sec. 4.1 — bootstrap CIs (R² and RF−GB MAE difference)
     ├── classC_polymer.py   # Sec. 5.3 — polymer stress test (Class C)
     ├── figure1_architecture.py # Figure 1 — system architecture
     ├── figure2_coverage.py     # Figure 2 — conformal coverage
@@ -68,6 +69,7 @@ python table4_coverage.py      # Table 4
 python table5_novelty.py       # Table 5  (the ρNE criterion + near/far ablation)
 python random_vs_grouped.py    # Section 5.2 leakage demonstration
 python bestcore_rf.py          # Section 4.1 RF-core robustness
+python bootstrap_sfrc.py       # Section 4.1 bootstrap CIs (R² and RF−GB MAE difference)
 python classC_polymer.py       # Section 5.3 polymer stress test
 python figure1_architecture.py # writes figure1.png  (system architecture)
 python figure2_coverage.py     # writes figure2.png  (conformal coverage)

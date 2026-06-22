@@ -53,6 +53,14 @@ python bestcore_rf.py
 Replacing the core with a random forest on SFRC leaves the conclusions unchanged:
 coverage ≈ 81 / 90 / 94%, ρNE(kNN) = +0.13 ± 0.12, ρNE(iso) = −0.09 ± 0.18 (both span zero).
 
+## Section 4.1 — bootstrap intervals (SFRC primary split)
+```bash
+python bootstrap_sfrc.py
+```
+On the SFRC primary split (seed 42, 2000 paired resamples, cores fit on train + calibration):
+GB-core R² 95% CI = **[0.709, 0.869]**; MAE difference (RF − GB) point = **−2.80** MPa,
+95% CI = **[−4.43, −1.21]** MPa — the negative interval excludes zero, so the random forest's lower error is statistically resolved.
+
 ## Section 5.2 — leakage demonstration (random vs grouped)
 ```bash
 python random_vs_grouped.py

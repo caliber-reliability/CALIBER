@@ -10,7 +10,7 @@ NAVY, ORANGE = "#27416b", "#e3852b"
 ACC = {"Mean": (-0.006, -0.046), "Linear": (0.593, 0.616), "SVR": (0.786, 0.837),
        "RandomForest": (0.849, 0.857), "GradBoost (core)": (0.855, 0.844)}
 RHO = {"kNN\nnovelty": (0.277, 0.045, 0.115, 0.149),
-       "Isolation\nforest": (0.313, -0.032, 0.095, 0.168)}   # (concrete, sfrc, sd_c, sd_s)
+       "Isolation\nforest": (0.313, -0.034, 0.095, 0.166)}   # (concrete, sfrc, sd_c, sd_s)
 LEG = dict(loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2, frameon=False,
            fontsize=10, columnspacing=1.1, handlelength=1.0, handletextpad=0.3, borderpad=0.1)
 
